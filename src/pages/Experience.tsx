@@ -1,14 +1,14 @@
 
-import Hero from "@/components/Hero";
+import Experience from "@/components/Experience";
 import Navigation from "@/components/Navigation";
 
-const Index = () => {
+const ExperiencePage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <Hero />
+      <Experience />
     </div>
   );
 };
 
-export default Index;
+export default ExperiencePage;

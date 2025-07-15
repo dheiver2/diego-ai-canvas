@@ -1,14 +1,14 @@
 
-import Hero from "@/components/Hero";
+import Skills from "@/components/Skills";
 import Navigation from "@/components/Navigation";
 
-const Index = () => {
+const SkillsPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <Hero />
+      <Skills />
     </div>
   );
 };
 
-export default Index;
+export default SkillsPage;

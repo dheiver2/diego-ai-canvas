@@ -1,15 +1,16 @@
 
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Animation */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500/20 rounded-full mix-blend-multiply filter blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-cyan-500/20 rounded-full mix-blend-multiply filter blur-xl animate-float" style={{ animationDelay: '4s' }}></div>
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/30 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500/30 rounded-full mix-blend-multiply filter blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-cyan-500/30 rounded-full mix-blend-multiply filter blur-xl animate-float" style={{ animationDelay: '4s' }}></div>
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
@@ -17,33 +18,35 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             Hi, I'm <span className="gradient-text">Diego Fan</span>
           </h1>
-          <p className="text-xl md:text-2xl text-foreground/80 mb-4">
+          <p className="text-xl md:text-2xl text-foreground/90 mb-4 font-medium">
             AI Engineering | ML Engineering | MLOps | LLMOps
           </p>
-          <p className="text-lg text-foreground/60 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg text-foreground/70 mb-8 max-w-3xl mx-auto leading-relaxed">
             Over 5 years of experience building scalable machine learning and generative AI solutions 
             that deliver real-world impact. Expert in GCP, Python, and end-to-end ML systems.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button 
-              className="glass-effect hover-glow border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground"
+              className="glass-effect hover-glow border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground font-semibold"
               size="lg"
+              asChild
             >
-              <a href="#contact" className="flex items-center gap-2">
+              <Link to="/contact" className="flex items-center gap-2">
                 Get In Touch
                 <Mail size={20} />
-              </a>
+              </Link>
             </Button>
             <Button 
               variant="outline" 
-              className="glass-effect hover-glow border-foreground/20"
+              className="glass-effect hover-glow border-foreground/30 text-foreground/90 hover:bg-foreground/10"
               size="lg"
+              asChild
             >
-              <a href="#projects" className="flex items-center gap-2">
+              <Link to="/projects" className="flex items-center gap-2">
                 View My Work
                 <ArrowDown size={20} />
-              </a>
+              </Link>
             </Button>
           </div>
 
