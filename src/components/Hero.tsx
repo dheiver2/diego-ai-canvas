@@ -58,7 +58,7 @@ const Hero = () => {
             {/* Social Links */}
             <div className="flex justify-center space-x-6 animate-fade-in" style={{ animationDelay: '0.9s' }}>
               <a
-                href="https://github.com/GAVB-SERVICOS"
+                href="https://github.com/diegofan-code"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="glass-effect p-4 rounded-xl hover-glow group transition-all duration-300 flex items-center justify-center"
@@ -67,7 +67,7 @@ const Hero = () => {
                 <Github className="text-foreground group-hover:text-primary transition-colors" size={24} />
               </a>
               <a
-                href="https://www.linkedin.com/in/diegofan-636b1b1a2"
+                href="https://www.linkedin.com/in/diego-fan/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="glass-effect p-4 rounded-xl hover-glow group transition-all duration-300 flex items-center justify-center"
