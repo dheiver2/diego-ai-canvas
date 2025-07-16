@@ -30,11 +30,18 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Technical <span className="gradient-text">Skills</span>
+    <section id="skills" className="py-20 bg-muted/50 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-10 left-10 w-96 h-96 bg-primary/30 rounded-full blur-3xl floating-element"></div>
+        <div className="absolute bottom-10 right-10 w-80 h-80 bg-accent/30 rounded-full blur-3xl floating-element" style={{ animationDelay: '3s' }}></div>
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-16 animate-slide-up">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 relative">
+            Technical <span className="gradient-text shimmer-effect">Skills</span>
+            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full animate-pulse"></div>
           </h2>
           <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
             Technologies and tools I use to build intelligent systems
@@ -45,18 +52,20 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={index}
-              className="glass-effect p-6 rounded-lg hover-glow"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="card-enhanced animate-scale-in group"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <h3 className="text-xl font-semibold mb-4 text-primary">{category.title}</h3>
+              <h3 className="text-xl font-semibold mb-4 gradient-text group-hover:scale-105 transition-transform duration-300">{category.title}</h3>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, skillIndex) => (
                   <Badge 
                     key={skillIndex}
                     variant="secondary"
-                    className="bg-foreground/10 text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                    className="gradient-border hover:scale-105 transform transition-all duration-300 animate-slide-up cursor-pointer group/badge relative overflow-hidden"
+                    style={{ animationDelay: `${(index * 0.2) + (skillIndex * 0.1)}s` }}
                   >
-                    {skill}
+                    <span className="relative z-10">{skill}</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 opacity-0 group-hover/badge:opacity-100 transition-opacity duration-300"></div>
                   </Badge>
                 ))}
               </div>

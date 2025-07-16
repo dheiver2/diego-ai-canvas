@@ -1,73 +1,101 @@
-# Welcome to your Lovable project
+# Portfólio Diego - AI Canvas
 
-## Project info
+Um portfólio moderno e responsivo desenvolvido com React, TypeScript e Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/fc38b489-bbd5-4343-aade-9b887f01d811
+## 🚀 Tecnologias Utilizadas
 
-## How can I edit this code?
+Este projeto foi construído com:
 
-There are several ways of editing your application.
+- **Vite** - Build tool e dev server
+- **TypeScript** - Tipagem estática
+- **React** - Biblioteca para interfaces
+- **shadcn/ui** - Componentes de UI
+- **Tailwind CSS** - Framework CSS utilitário
 
-**Use Lovable**
+## 📋 Pré-requisitos
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/fc38b489-bbd5-4343-aade-9b887f01d811) and start prompting.
+Antes de começar, você precisa ter instalado:
 
-Changes made via Lovable will be committed automatically to this repo.
+- [Node.js](https://nodejs.org/) (versão 16 ou superior)
+- npm ou yarn
 
-**Use your preferred IDE**
+## 🛠️ Instalação e Execução
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Siga estes passos para executar o projeto localmente:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```bash
+# 1. Clone o repositório
+git clone <URL_DO_SEU_REPOSITORIO>
 
-Follow these steps:
+# 2. Navegue até o diretório do projeto
+cd diego-ai-canvas
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# 3. Instale as dependências
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 4. Inicie o servidor de desenvolvimento
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+O projeto estará disponível em `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📝 Scripts Disponíveis
 
-**Use GitHub Codespaces**
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Gera a build de produção
+- `npm run preview` - Visualiza a build de produção
+- `npm run lint` - Executa o linter
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🏗️ Estrutura do Projeto
 
-## What technologies are used for this project?
+```
+src/
+├── components/     # Componentes React reutilizáveis
+├── pages/         # Páginas da aplicação
+├── hooks/         # Custom hooks
+├── lib/           # Utilitários e configurações
+└── ...
+```
 
-This project is built with:
+## 🎨 Personalização
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Para personalizar o portfólio:
 
-## How can I deploy this project?
+1. Edite os componentes em `src/components/`
+2. Modifique as páginas em `src/pages/`
+3. Ajuste os estilos no Tailwind CSS
+4. Atualize as informações pessoais nos componentes
 
-Simply open [Lovable](https://lovable.dev/projects/fc38b489-bbd5-4343-aade-9b887f01d811) and click on Share -> Publish.
+## 📱 Responsividade
 
-## Can I connect a custom domain to my Lovable project?
+O projeto é totalmente responsivo e otimizado para:
 
-Yes, you can!
+- Desktop
+- Tablet
+- Mobile
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🚀 Deploy
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Para fazer o deploy da aplicação:
+
+1. Execute `npm run build` para gerar a build de produção
+2. Os arquivos estarão na pasta `dist/`
+3. Faça upload dos arquivos para seu provedor de hospedagem
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 🤝 Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para:
+
+1. Fazer um fork do projeto
+2. Criar uma branch para sua feature
+3. Fazer commit das mudanças
+4. Fazer push para a branch
+5. Abrir um Pull Request
+
+---
+
+**Desenvolvido com ❤️ por Diego**

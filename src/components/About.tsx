@@ -26,20 +26,58 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-secondary/20">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            About <span className="gradient-text">Me</span>
+    <section id="about" className="py-20 bg-background relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 right-20 w-64 h-64 bg-primary/20 rounded-full blur-3xl floating-element"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-accent/20 rounded-full blur-3xl floating-element" style={{ animationDelay: '2s' }}></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="animate-slide-up">
+          <h2 className="text-3xl font-bold text-center mb-12 gradient-text relative">
+            <span className="shimmer-effect">Sobre Mim</span>
+            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full animate-pulse"></div>
           </h2>
-          <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-            Passionate about transforming complex problems into intelligent solutions
-          </p>
         </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="animate-slide-in-left">
-            <h3 className="text-2xl font-semibold mb-6 text-primary">My Journey</h3>
+        
+        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <div className="space-y-6">
+            <div className="card-enhanced animate-scale-in" style={{ animationDelay: '0.2s' }}>
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-primary/20 rounded-lg mr-3 animate-pulse-glow">
+                  <Code className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold gradient-text">Desenvolvedor Apaixonado</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                Com mais de 3 anos de experiência em desenvolvimento web, transformo ideias em soluções digitais inovadoras.
+              </p>
+            </div>
+            
+            <div className="card-enhanced animate-scale-in" style={{ animationDelay: '0.4s' }}>
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-accent/20 rounded-lg mr-3 animate-pulse-glow">
+                  <Lightbulb className="h-6 w-6 text-accent" />
+                </div>
+                <h3 className="text-xl font-semibold gradient-text">Inovação Constante</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                Sempre em busca de novas tecnologias e metodologias para criar soluções mais eficientes e impactantes.
+              </p>
+            </div>
+            
+            <div className="card-enhanced animate-scale-in" style={{ animationDelay: '0.6s' }}>
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-primary/20 rounded-lg mr-3 animate-pulse-glow">
+                  <Users className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold gradient-text">Trabalho em Equipe</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                Acredito que as melhores soluções surgem da colaboração e troca de conhecimentos entre profissionais.
+              </p>
+            </div>
             <p className="text-foreground/80 mb-6 leading-relaxed">
               My journey began at <strong>Grupo Boticário</strong>, where I mastered deploying ML models to production, 
               automating workflows, and connecting data science with engineering. I've become an expert in 
