@@ -25,7 +25,7 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-border/20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           <Link 
             to="/" 
@@ -35,7 +35,7 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
+          <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -53,10 +53,11 @@ const Navigation = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden hover:bg-primary/20 transition-all duration-300"
+            className="md:hidden hover:bg-primary/20 transition-all duration-300 flex items-center justify-center"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle mobile menu"
           >
-            {isOpen ? <X size={20} /> : <Menu size={20} />}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </Button>
         </div>
 

@@ -55,34 +55,36 @@ const Hero = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex justify-center space-x-4 animate-fade-in" style={{ animationDelay: '0.9s' }}>
+          <div className="flex justify-center space-x-6 animate-fade-in mb-8" style={{ animationDelay: '0.9s' }}>
             <a 
               href="https://github.com/GAVB-SERVICOS" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="glass-effect p-3 rounded-xl hover-glow group transition-all duration-300"
+              className="glass-effect p-4 rounded-xl hover-glow group transition-all duration-300 flex items-center justify-center"
+              aria-label="GitHub Profile"
             >
-              <Github className="text-foreground group-hover:text-primary transition-colors" size={20} />
+              <Github className="text-foreground group-hover:text-primary transition-colors" size={24} />
             </a>
             <a 
               href="https://www.linkedin.com/in/diegofan-636b1b1a2" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="glass-effect p-3 rounded-xl hover-glow group transition-all duration-300"
+              className="glass-effect p-4 rounded-xl hover-glow group transition-all duration-300 flex items-center justify-center"
+              aria-label="LinkedIn Profile"
             >
-              <Linkedin className="text-foreground group-hover:text-primary transition-colors" size={20} />
+              <Linkedin className="text-foreground group-hover:text-primary transition-colors" size={24} />
             </a>
           </div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <button 
             onClick={scrollToNext}
-            className="glass-effect p-2 rounded-full hover-glow group transition-all duration-300"
+            className="glass-effect p-3 rounded-full hover-glow group transition-all duration-300 flex items-center justify-center"
             aria-label="Scroll to next section"
           >
-            <ArrowDown className="text-foreground group-hover:text-primary transition-colors" size={20} />
+            <ArrowDown className="text-foreground group-hover:text-primary transition-colors" size={24} />
           </button>
         </div>
       </div>

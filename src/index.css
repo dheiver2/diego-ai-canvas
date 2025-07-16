@@ -89,7 +89,7 @@
   }
 
   .nav-link {
-    @apply relative rounded-lg px-3 py-2 transition-all duration-300;
+    @apply relative rounded-lg px-4 py-2 transition-all duration-300;
     background: hsl(var(--card) / 0.2);
     backdrop-filter: blur(8px);
   }
