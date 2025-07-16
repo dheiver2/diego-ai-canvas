@@ -42,7 +42,7 @@ const About = () => {
             <h2 className="text-3xl font-bold mb-8 gradient-text">My Journey</h2>
             <div className="space-y-6">
               <p className="text-foreground/80 leading-relaxed">
-                My journey began at <strong>Grupo Boticário</strong>, where I mastered deploying ML models to production, 
+                My journey began at <strong className="text-primary">Grupo Boticário</strong>, where I mastered deploying ML models to production, 
                 automating workflows, and connecting data science with engineering. I've become an expert in 
                 Google Cloud Platform, building scalable solutions that bridge the gap between research and real-world applications.
               </p>
@@ -52,7 +52,7 @@ const About = () => {
                 and everything in between.
               </p>
               <p className="text-foreground/80 leading-relaxed">
-                Before diving into AI, I worked as a <strong>Financial Analyst</strong>, which developed my analytical 
+                Before diving into AI, I worked as a <strong className="text-accent">Financial Analyst</strong>, which developed my analytical 
                 mindset and attention to detail - skills that continue to enhance my approach to data-driven problem-solving.
               </p>
             </div>
@@ -67,11 +67,11 @@ const About = () => {
                   className="card-enhanced flex items-start space-x-4"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="w-14 h-14 glass-effect rounded-xl flex items-center justify-center bg-primary/10">
+                  <div className="w-14 h-14 glass-effect rounded-xl flex items-center justify-center bg-primary/10 border border-primary/20">
                     <item.icon className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold mb-2">{item.title}</h4>
+                    <h4 className="text-lg font-semibold mb-2 text-foreground">{item.title}</h4>
                     <p className="text-foreground/70">{item.description}</p>
                   </div>
                 </div>

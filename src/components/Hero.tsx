@@ -14,17 +14,17 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-secondary/10 to-background">
       {/* Background Elements */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl floating-element"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/20 rounded-full blur-3xl floating-element" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-3/4 left-1/2 w-64 h-64 bg-primary/15 rounded-full blur-3xl floating-element" style={{ animationDelay: '4s' }}></div>
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-3xl floating-element"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/25 rounded-full blur-3xl floating-element" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-3/4 left-1/2 w-64 h-64 bg-primary/20 rounded-full blur-3xl floating-element" style={{ animationDelay: '4s' }}></div>
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-5xl mx-auto">
-          <div className="animate-slide-up">
+          <div className="animate-fade-in">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
-              <span className="block mb-4">Diego</span>
+              <span className="block mb-4 text-foreground">Diego</span>
               <span className="gradient-text shimmer-effect">Fan</span>
             </h1>
           </div>
@@ -41,7 +41,7 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <Button asChild size="lg" className="btn-primary text-lg px-8 py-4 h-auto">
+            <Button asChild size="lg" className="text-lg px-8 py-4 h-auto">
               <Link to="/projects">
                 View My Work
               </Link>
@@ -55,7 +55,7 @@ const Hero = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex justify-center space-x-6 mt-12 animate-slide-up" style={{ animationDelay: '0.9s' }}>
+          <div className="flex justify-center space-x-6 mt-12 animate-fade-in" style={{ animationDelay: '0.9s' }}>
             <a 
               href="https://github.com/GAVB-SERVICOS" 
               target="_blank" 
