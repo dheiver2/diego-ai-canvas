@@ -1,8 +1,6 @@
 
-import { Mail, MapPin, Linkedin, Github, Send } from "lucide-react";
+import { Mail, MapPin, Linkedin, Github, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 
 const Contact = () => {
   const contactInfo = [
@@ -31,6 +29,10 @@ const Contact = () => {
       href: "https://github.com/GAVB-SERVICOS"
     }
   ];
+
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/5571982328952", "_blank");
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-secondary/20 to-background pt-24 pb-16">
@@ -90,54 +92,27 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
+          {/* WhatsApp Contact */}
           <div className="animate-fade-in">
-            <div className="card-enhanced">
-              <h3 className="text-2xl font-bold mb-6 gradient-text">Send a Message</h3>
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-semibold mb-3 text-foreground/90">Name</label>
-                    <Input 
-                      placeholder="Your name"
-                      className="glass-effect border-border/50 focus:border-primary bg-input/50 h-12"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold mb-3 text-foreground/90">Email</label>
-                    <Input 
-                      type="email"
-                      placeholder="your.email@example.com"
-                      className="glass-effect border-border/50 focus:border-primary bg-input/50 h-12"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-semibold mb-3 text-foreground/90">Subject</label>
-                  <Input 
-                    placeholder="Project collaboration, consultation, etc."
-                    className="glass-effect border-border/50 focus:border-primary bg-input/50 h-12"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-semibold mb-3 text-foreground/90">Message</label>
-                  <Textarea 
-                    placeholder="Tell me about your project or idea..."
-                    className="glass-effect border-border/50 focus:border-primary bg-input/50 min-h-[140px] resize-none"
-                  />
-                </div>
-                
-                <Button 
-                  type="submit"
-                  className="w-full btn-primary text-lg h-12"
-                  size="lg"
-                >
-                  Send Message
-                  <Send className="ml-2" size={20} />
-                </Button>
-              </form>
+            <div className="card-enhanced text-center">
+              <div className="w-20 h-20 glass-effect rounded-full flex items-center justify-center bg-green-500/10 mx-auto mb-6">
+                <MessageCircle className="text-green-500" size={40} />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 gradient-text">Start a Conversation</h3>
+              <p className="text-foreground/85 mb-8 leading-relaxed">
+                Ready to discuss your project? Send me a message on WhatsApp and let's chat about how we can work together.
+              </p>
+              <Button 
+                onClick={handleWhatsAppClick}
+                className="w-full btn-primary text-lg h-12 bg-green-600 hover:bg-green-700 border-green-600"
+                size="lg"
+              >
+                <MessageCircle className="mr-2" size={20} />
+                Contact via WhatsApp
+              </Button>
+              <p className="text-sm text-muted-foreground mt-4">
+                +55 71 98232-8952
+              </p>
             </div>
           </div>
         </div>
