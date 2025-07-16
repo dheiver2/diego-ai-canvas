@@ -24,31 +24,27 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-border/30">
-      <div className="container mx-auto py-4 lg:py-6">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-border/20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex items-center justify-between">
           <Link 
             to="/" 
-            className="text-2xl lg:text-3xl font-bold gradient-text relative group hover:scale-105 transition-transform duration-300"
+            className="text-xl sm:text-2xl lg:text-3xl font-bold gradient-text relative group hover:scale-105 transition-transform duration-300"
           >
-            <span className="shimmer-effect">Diego Fan</span>
-            <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-500"></div>
+            Diego Fan
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
-            {navItems.map((item, index) => (
+          <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
+            {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`nav-link text-sm lg:text-base transition-all duration-300 animate-fade-in ${
+                className={`nav-link text-sm lg:text-base transition-all duration-300 ${
                   isActive(item.path) ? 'active' : ''
                 }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <span className="relative z-10">{item.name}</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent hover:w-full transition-all duration-300"></div>
+                {item.name}
               </Link>
             ))}
           </div>
@@ -57,37 +53,28 @@ const Navigation = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden hover:bg-primary/20 transition-all duration-300 hover:scale-110 transform glass-effect group relative overflow-hidden"
+            className="md:hidden hover:bg-primary/20 transition-all duration-300"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <div className="relative z-10">
-              {isOpen ? (
-                <X size={24} className="group-hover:rotate-90 transition-transform duration-300" />
-              ) : (
-                <Menu size={24} className="group-hover:scale-110 transition-transform duration-300" />
-              )}
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
           </Button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-6 pb-4 space-y-3 border-t border-border/30 pt-6 animate-fade-in">
-            {navItems.map((item, index) => (
+          <div className="md:hidden mt-4 pb-4 space-y-2 border-t border-border/20 pt-4 animate-fade-in">
+            {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`block px-6 py-4 text-base rounded-lg transition-all duration-300 animate-scale-in group relative overflow-hidden glass-effect ${
+                className={`block px-4 py-3 text-base rounded-lg transition-all duration-300 ${
                   isActive(item.path)
                     ? 'bg-primary/20 text-primary border border-primary/30 font-semibold'
-                    : 'text-foreground hover:bg-primary/20 hover:text-primary hover:scale-105 transform'
+                    : 'text-foreground hover:bg-primary/10 hover:text-primary'
                 }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
                 onClick={() => setIsOpen(false)}
               >
-                <span className="relative z-10">{item.name}</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+                {item.name}
               </Link>
             ))}
           </div>
